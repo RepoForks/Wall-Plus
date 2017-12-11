@@ -67,6 +67,7 @@ public class Search_Fragment extends Fragment {
     private InterstitialAd interstitialAd;
 
     private static String searchSite;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -111,11 +112,12 @@ public class Search_Fragment extends Fragment {
                             try {
                                 wallpapersModels.remove(wallpapersModels.size() - 1);
                                 searchFragmentCustomAdapter.notifyItemRemoved(wallpapersModels.size());
-                            }catch (ArrayIndexOutOfBoundsException e){}
+                            } catch (ArrayIndexOutOfBoundsException e) {
+                            }
                             Log.i("REMOVED", "NULL");
                             //add items one by one
                             Log.i("INIT SEARCH", "DATA");
-                            new loadMore().execute( searchSite + query + "&page=" + currPg);
+                            new loadMore().execute(searchSite + query + "&page=" + currPg);
                             searchFragmentCustomAdapter.setLoaded();
                         }
                     }, 900);
@@ -154,10 +156,9 @@ public class Search_Fragment extends Fragment {
                     SharedPreferences.Editor editor = sp.edit();
                     editor.putInt("numSearch", temp);
                     editor.apply();
-                    Log.i("---------->>SEARCHES", String.valueOf(sp.getInt("numSearch",-1)));
+                    Log.i("---------->>SEARCHES", String.valueOf(sp.getInt("numSearch", -1)));
                     return true;
-                }
-                else {
+                } else {
                     Toast.makeText(getContext(), getResources().getString(R.string.search_relevant), Toast.LENGTH_SHORT).show();
                 }
 
@@ -350,15 +351,17 @@ public class Search_Fragment extends Fragment {
             progressBar.setVisibility(View.GONE);
             searchQueryText.setVisibility(View.INVISIBLE);
             searchQuery.setVisibility(View.INVISIBLE);
-            if (interstitialAd.isLoaded() && numSearch >= 4) {
+            if (interstitialAd.isLoaded() && numSearch >= 3) {
                 interstitialAd.show();
                 Log.i("IS LOADED", "INTERSTITIAL");
                 numSearch = 0;
-                SharedPreferences sp = getActivity().getSharedPreferences(getResources().getString(R.string.preferencesName), Activity.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sp.edit();
-                editor.putInt("numSearch", 0);
-                editor.apply();
-                loadInterstitial();
+                try {
+                    SharedPreferences sp = getActivity().getSharedPreferences(getResources().getString(R.string.preferencesName), Activity.MODE_PRIVATE);
+                    SharedPreferences.Editor editor = sp.edit();
+                    editor.putInt("numSearch", 0);
+                    editor.apply();
+                    loadInterstitial();
+                }catch (NullPointerException e){}
             }
 
             searchFragmentCustomAdapter.notifyDataSetChanged();

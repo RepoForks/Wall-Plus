@@ -47,18 +47,12 @@ public class Home_Fragment extends Fragment {
     public RecyclerView recyclerView;
     private HomeFragmentCustomAdapter homeFragmentCustomAdapter;
     private ImageView noNetImage;
-    private TextView noNetText, loadinWallTxt;
+    private TextView noNetText, loadingWallTxt;
     private Button connectBtn;
-
-    private GridLayoutManager gridLayoutManager;
-
-    boolean isNetworkConnected;
 
     public static int pageCount = 2;
 
     protected Handler handler;
-
-    public static int spanCount = 3;
 
     public static int wallpaperNumber = 0;
 
@@ -72,11 +66,10 @@ public class Home_Fragment extends Fragment {
 
     @Nullable
     @Override
+
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         View view = inflater.inflate(R.layout.home_fragment, null);
-
-        spanCount = 3;
 
         LocalBroadcastManager.getInstance(getContext()).registerReceiver(loadMoreBroadcastReceiver,
                 new IntentFilter("LoadMore"));
@@ -84,8 +77,7 @@ public class Home_Fragment extends Fragment {
 //                new IntentFilter("InitData"));
 
         progressBar = view.findViewById(R.id.progressBar);
-        loadinWallTxt = view.findViewById(R.id.loading_walls);
-
+        loadingWallTxt = view.findViewById(R.id.loading_walls);
 
         noNetImage = view.findViewById(R.id.noNet);
         noNetText = view.findViewById(R.id.noNetText);
@@ -104,7 +96,7 @@ public class Home_Fragment extends Fragment {
         homeSite = "http://papers.co/iphone/";
         initData();
 
-        gridLayoutManager = new GridLayoutManager(getContext(), 3);
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(getContext(), 3);
         recyclerView = view.findViewById(R.id.homeFragment_rv);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(gridLayoutManager);
@@ -155,9 +147,8 @@ public class Home_Fragment extends Fragment {
         if (requestCode == 0) {
             Toast.makeText(getContext(), "Press Refresh to load", Toast.LENGTH_SHORT).show();
             Log.i("In Result", "TRUE");
-            boolean n = isNetworkAvailable();
-            Log.i("NETWORK", String.valueOf(n));
-            if (n) {
+            Log.i("NETWORK", String.valueOf(UtilityClass.isNetworkAvailable(getContext())));
+            if (UtilityClass.isNetworkAvailable(getContext())) {
                 initData();
             }
         }
@@ -165,8 +156,7 @@ public class Home_Fragment extends Fragment {
 
 
     public void initData() {
-        isNetworkConnected = isNetworkAvailable();
-        if (isNetworkConnected) {
+        if (UtilityClass.isNetworkAvailable(getContext())) {
             noNetImage.setVisibility(View.INVISIBLE);
             noNetText.setVisibility(View.INVISIBLE);
             connectBtn.setVisibility(View.GONE);
@@ -251,16 +241,6 @@ public class Home_Fragment extends Fragment {
                 Intent intent = new Intent(getActivity(), AboutActivity.class);
                 startActivity(intent);
                 return true;
-//            case R.id.grid_two:
-//                spanCount = 2;
-//                gridLayoutManager.setSpanCount(spanCount);
-//                recyclerView.setLayoutManager(gridLayoutManager);
-//                return true;
-//            case R.id.grid_three:
-//                spanCount = 3;
-//                gridLayoutManager.setSpanCount(spanCount);
-//                recyclerView.setLayoutManager(gridLayoutManager);
-//                return true;
             case R.id.refresh:
                 pageCount = 2;
                 if (!isLoading) {
@@ -269,6 +249,12 @@ public class Home_Fragment extends Fragment {
                     initData();
                 }
                 return true;
+//            case R.id.automatic_wall_changer:
+//                Intent auto = new Intent(getContext(), AutomaticWallpaperChanger.class);
+//                auto.putExtra("paths", Downloaded_Fragment.filePaths);
+//                getContext().startService(auto);
+//                //Toast.makeText(getContext(),"Service started", Toast.LENGTH_SHORT).show();
+//                return true;
             default:
                 return super.onOptionsItemSelected(item);
 
@@ -277,12 +263,11 @@ public class Home_Fragment extends Fragment {
 
     public void loadFromInternet(final String url) {
 
-        if (isNetworkConnected) {
+        if (UtilityClass.isNetworkAvailable(getContext())) {
             getActivity().runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
                     wallpapersModelArrayList.clear();
-                    //new ReadJSON().execute(url);
                     new ReadHTML().execute(url);
                 }
             });
@@ -297,7 +282,7 @@ public class Home_Fragment extends Fragment {
         @Override
         protected String doInBackground(String... params) {
 
-            if (isNetworkAvailable()) {
+            if (UtilityClass.isNetworkAvailable(getContext())) {
 
                 try {
 
@@ -339,7 +324,7 @@ public class Home_Fragment extends Fragment {
         protected void onPreExecute() {
             progressBar.setIndeterminate(true);
             progressBar.setVisibility(View.VISIBLE);
-            loadinWallTxt.setVisibility(View.VISIBLE);
+            loadingWallTxt.setVisibility(View.VISIBLE);
 
         }
 
@@ -349,22 +334,9 @@ public class Home_Fragment extends Fragment {
             //Log.i("COUNT ", String.valueOf(count));
             homeFragmentCustomAdapter.notifyDataSetChanged();
             progressBar.setVisibility(View.GONE);
-            loadinWallTxt.setVisibility(View.GONE);
+            loadingWallTxt.setVisibility(View.GONE);
             recyclerView.setVisibility(View.VISIBLE);
         }
-    }
-
-    public boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager
-                = (ConnectivityManager) getContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-        try {
-            NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-            Log.i("IS NETWORK", String.valueOf(activeNetworkInfo));
-            Log.i("Connected", String.valueOf(activeNetworkInfo.isConnected()));
-            return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-        } catch (Exception e) {
-        }
-        return false;
     }
 
     private BroadcastReceiver loadMoreBroadcastReceiver = new BroadcastReceiver() {

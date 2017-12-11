@@ -1,0 +1,112 @@
+<resources>
+
+    <!--Rate Dialog Resources-->
+    <string name="rate_dialog_title">On dirait que tu aimes ça ici!</string>
+    <string name="rate_dialog_message">Si vous appréciez Wall Bucket, cela vous dérangerait-il de prendre un moment pour l\'évaluer? Il ne prendra pas plus d'une minute. Merci pour votre aide! :)</string>
+    <string name="rate_dialog_ok">Évaluer maintenant</string>
+    <string name="rate_dialog_cancel">Plus tard</string>
+    <string name="rate_dialog_no">Non merci</string>
+
+    <!--App Strings -->
+    <string name="no_net_connection">No internet connection</string>
+    <string name="connect_btn">Relier</string>
+    <string name="cannot_connect">Impossible de se connecter à un réseau!</string>
+    <string name="loading_more">Chargement plus de fonds d\'écran</string>
+    <string name="disable_adblock">Désactivez AdBlock et soutenez le développement!</string>
+    <string name="yes">Oui</string>
+    <string name="yes_exit">Êtes-vous sûr de vouloir quitter?</string>
+    <string name="no">Pas</string>
+
+    <!--Menus-->
+    <string name="menu_about">Sur</string>
+    <string name="remove_database">Supprimer la base</string>
+    <string name="refresh">Rafraîchir</string>
+    <string name="wall_changer">Wallpaper changer</string>
+
+    <!--Main Activity-->
+    <string name="playstore_error">Erreur lors de l\'ouverture de PlayStore</string>
+    <string name="cannot_update">Couldn\'t check for updates!</string>
+
+    <!--Intro Activity Strings-->
+    <string name="app_desc">La meilleure application de téléchargement de fond d\'écran pour Android!</string>
+    <string name="explore_intro">Explorer</string>
+    <string name="explore_intro_desc">Plus de 50000 fonds d\'écran curated pour votre appareil</string>
+    <string name="search_intro">Chercher</string>
+    <string name="search_intro_desc">Trouvez les papiers peints qui correspondent à vos goûts</string>
+    <string name="category_intro">Catégories</string>
+    <string name="category_intro_desc">Explorez les catégories pour trouver des fonds d\'écran précis</string>
+    <string name="fav_intro">Favoris</string>
+    <string name="fav_intro_desc">Aimé un fond d\'écran? Appuyez deux fois pour les ajouter aux favoris afin de ne jamais les perdre</string>
+    <string name="ready_ask">Prêt à plonger?</string>
+    <string name="press_tick">Appuyez sur «Tick» pour continuer</string>
+    <string name="ready_rock">Vous êtes prêt à Rock!</string>
+
+
+    <!--Set As Wallpaper-->
+    <string name="applying">Application du papier peint</string>
+    <string name="apply_success">Fond d\'écran appliqué avec succès</string>
+    <string name="apply_error">Erreur lors de l\'application du papier peint</string>
+
+
+    <!--Download Handler-->
+    <string name="downloaded">Téléchargé</string>
+    <string name="permission_denied">Cannot download , please grant permission using \nSettings->Apps and Notification->App Permission</string>
+
+    <!--Favorite Fragment-->
+    <string name="delete_warning">Attention!</string>
+    <string name="delete_warning_msg">Cela supprimera tous vos favoris!</string>
+    <string name="delete_error">Une erreur est survenue!</string>
+    <string name="no_favs">Pas encore de favoris!</string>
+    <string name="double_taps">Appuyez deux fois sur Fonds d\'écran pour les ajouter aux favoris</string>
+    <string name="add_fav_btn">Ajouter des favoris</string>
+
+
+
+    <!--Fullscreen Wallpaper View Activity-->
+    <string name="size_option_small">Petite résolution</string>
+    <string name="size_option_med">Moyenne résolution</string>
+    <string name="size_option_large">Grande résolution</string>
+    <string name="download_wallpaper_btn">Télécharger</string>
+    <string name="set_wallpaper_btn">Ensemble</string>
+    <string name="downloading_wallpaper">Téléchargement du fond d\'écran</string>
+
+
+    <!--Home Fragment-->
+    <string name="loading_wallpapers">Chargement</string>
+
+
+    <!--Search Fragment-->
+    <string name="search_what">Dites-moi ce que vous cherchez, \n je vais faire le reste!</string>
+    <string name="search404">Désolé, Aucun fond d\'écran trouvé pour \n</string>
+    <string name="search_query_hint">Que cherchez-vous ?</string>
+    <string name="search_query">Recherche de fonds d\'écran pour</string>
+    <string name="search_relevant">Rechercher quelque chose</string>
+
+
+    <!--Downloads Fragment-->
+    <string name="no_wallpaper_downloaded">Aucun fond d\'écran Téléchargé!</string>
+    <string name="download_now_btn">Télécharger maintenant</string>
+
+
+    <!--About Me Section-->
+    <string name="aboutme">Android Developer and Graphic Designer.\Tech Enthusiast at morning and \Full Otaku at night\nEat, Sleep, Code, Repeat!</string>
+    <string name="morefromdev">Plus d\'applications par développeur</string>
+    <string name="help_translate">Aidez-nous à traduire?</string>
+    <string name="contribute">Contribuer en aidant à la traduction de l\'application dans différentes langues.</string>
+    <string name="contributors">Contributeurs</string>
+    <string name="copyright_claim">Droit d\'auteur / revendication</string>
+    <string name="cpyrghtText">Je ne possède ni ne revendique le droit d\'auteur sur les images utilisées dans l\'application
+                                tout le travail appartient à leurs propriétaires d\'origine.
+                                Les images de l\'application sont uniquement destinées à un usage personnel et
+                                ne devrait pas être vendu ou distribué sans
+                                le consentement de leurs propriétaires. :)</string>
+    <string name="shareApp">Partager l\'application avec des amis</string>
+    <string name="shareText">Hey checkout cette application Awesome Wallpaper J\'ai trouvé! \nIl est appelé Wall Bucket. \nhttp: //play.google.com/store/apps/details? Id =</string>
+    <string name="rateApp">Noter l\'application sur \nGoogle Play</string>
+
+    <!--Update App Dialog-->
+    <string name="update_text">Nouvelle mise à jour - Version</string>
+    <string name="update">Mettre à jour</string>
+    <string name="release_notes"><b>Modifications:</b></string>
+
+</resources>

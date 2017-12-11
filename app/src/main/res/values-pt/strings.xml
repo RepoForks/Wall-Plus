@@ -1,0 +1,114 @@
+<resources>
+
+    <!--Rate Dialog Resources-->
+    <string name="rate_dialog_title">Parece que você gosta disso aqui!</string>
+    <string name="rate_dialog_message">Se você estiver desfrutando Wall Bucket, você se importaria de tomar um momento para avaliá-lo? Não demorará mais de um minuto. Obrigado por seu apoio! :)</string>
+    <string name="rate_dialog_ok">Avalie-o agora</string>
+    <string name="rate_dialog_cancel">Mais tarde</string>
+    <string name="rate_dialog_no">Não, obrigado</string>
+
+    <!--App Strings -->
+    <string name="no_net_connection">Sem conexão à internet</string>
+    <string name="connect_btn">Conectar</string>
+    <string name="cannot_connect">Não é possível conectar-se a uma rede!</string>
+    <string name="loading_more">Carregando mais Wallpapers</string>
+    <string name="disable_adblock">Desative AdBlock e suporte ao desenvolvimento!</string>
+    <string name="yes">Sim</string>
+    <string name="yes_exit">Tem certeza que quer sair?</string>
+    <string name="no">Não</string>
+
+
+    <!--Menus-->
+    <string name="menu_about">Sobre</string>
+    <string name="remove_database">Remover banco de dados</string>
+    <string name="refresh">Atualizar</string>
+    <string name="wall_changer">Wallpaper changer</string>
+
+    <!--Main Activity-->
+    <string name="playstore_error">Erro ao abrir PlayStore</string>
+    <string name="cannot_update">Não podemos verificar se há atualizações!</string>
+
+    <!--Intro Activity Strings-->
+    <string name="app_desc">O melhor aplicativo de download de papel de parede para Android!</string>
+    <string name="explore_intro">Explorar</string>
+    <string name="explore_intro_desc">Mais de 50000 papéis de parede curados para o seu dispositivo</string>
+    <string name="search_intro">Pesquisa</string>
+    <string name="search_intro_desc">Encontre os papéis de parede que se adequam ao seu gosto</string>
+    <string name="category_intro">Categorias</string>
+    <string name="category_intro_desc">Explore as categorias para encontrar papéis de parede precisos</string>
+    <string name="fav_intro">Favoritos</string>
+    <string name="fav_intro_desc">Adorei um papel de parede? Toque duas vezes para adicioná-los aos Favoritos para que você nunca os perca</string>
+    <string name="ready_ask">Pronto para mergulhar?</string>
+    <string name="press_tick">Pressione \'Tick\' para continuar</string>
+    <string name="ready_rock">Você está pronto para Rock!</string>
+
+
+    <!--Set As Wallpaper-->
+    <string name="applying">Aplicação de papel de parede</string>
+    <string name="apply_success">Papel de parede aplicado com sucesso</string>
+    <string name="apply_error">Erro ao aplicar o papel de parede!</string>
+
+
+
+    <!--Download Handler-->
+    <string name="downloaded">Baixado</string>
+    <string name="permission_denied">Não pode fazer o download, conceda permissão usando \nConfigurações-> Aplicativos e notificação-> Permissão do aplicativo</string>
+
+    <!--Favorite Fragment-->
+    <string name="delete_warning">Atenção!</string>
+    <string name="delete_warning_msg">Isso eliminará todos os seus Favoritos!</string>
+    <string name="delete_error">Ocorreu algum erro!</string>
+    <string name="no_favs">Ainda não há Favoritos!</string>
+    <string name="double_taps">Toque em Papéis de parede para adicioná-los aos Favoritos</string>
+    <string name="add_fav_btn">Adicionar favoritos</string>
+
+
+
+    <!--Fullscreen Wallpaper View Activity-->
+    <string name="size_option_small">Pequena Resolução</string>
+    <string name="size_option_med">Resolução média</string>
+    <string name="size_option_large">Grande resolução</string>
+    <string name="download_wallpaper_btn">Download</string>
+    <string name="set_wallpaper_btn">Conjunto</string>
+    <string name="downloading_wallpaper">Download de papel de parede</string>
+
+
+    <!--Home Fragment-->
+    <string name="loading_wallpapers">Carregando Wallpapers</string>
+
+
+    <!--Search Fragment-->
+    <string name="search_what">Diga-me o que você está procurando, \n Vou fazer o resto!</string>
+    <string name="search404">Desculpe, Nenhum wallpaper encontrado para \n</string>
+    <string name="search_query_hint">O que você está procurando ?</string>
+    <string name="search_query">Procurando papéis de parede para</string>
+    <string name="search_relevant">Procure algo relevante</string>
+
+
+    <!--Downloads Fragment-->
+    <string name="no_wallpaper_downloaded">Não há Wallpapers baixados!</string>
+    <string name="download_now_btn">Baixe Agora</string>
+
+
+    <!--About Me Section-->
+    <string name="aboutme">Android Developer e Designer Gráfico. \nTech Enthusiast de manhã e \nFull Otaku de noite \nEat, Sleep, Code, Repeat!</string>
+    <string name="morefromdev">Mais aplicativos pelo desenvolvedor</string>
+    <string name="help_translate">Ajudar-nos a traduzir?</string>
+    <string name="contribute">Contribua ajudando na tradução do aplicativo em diferentes idiomas.</string>
+    <string name="contributors">Colaboradores</string>
+    <string name="copyright_claim">Direitos autorais / Reclamação</string>
+    <string name="cpyrghtText">Não possuo ou reivindico direitos autorais sobre as imagens usadas no aplicativo
+                                Todo o trabalho pertence aos seus proprietários originais.
+                                As imagens no aplicativo são apenas para uso pessoal e
+                                não deve ser vendido ou distribuído sem
+                                o consentimento dos seus proprietários. :)</string>
+    <string name="shareApp">Compartilhar aplicativo com amigos</string>
+    <string name="shareText">Hey checkout this Awesome Wallpaper app I found!\nIt\'s called Wall Bucket.\nhttp://play.google.com/store/apps/details?id=</string>
+    <string name="rateApp">Avalie o aplicativo em \nGoogle Play</string>
+
+    <!--Update App Dialog-->
+    <string name="update_text">Nova Atualização - Versão</string>
+    <string name="update">Atualizar</string>
+    <string name="release_notes"><b>Alterar log:</b></string>
+
+</resources>

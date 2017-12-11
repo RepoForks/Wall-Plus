@@ -1,0 +1,113 @@
+<resources>
+
+    <!--Rate Dialog Resources-->
+    <string name="rate_dialog_title">Sieht so aus, als ob du es hier magst!</string>
+    <string name="rate_dialog_message">Wenn Sie Wall Bucket genießen, würde es Ihnen etwas ausmachen, einen Moment zu nehmen, um es zu bewerten? Es dauert nicht länger als eine Minute. Danke für deine Unterstützung! :)</string>
+    <string name="rate_dialog_ok">Bewerte es jetzt</string>
+    <string name="rate_dialog_cancel">Später</string>
+    <string name="rate_dialog_no">Nein Danke</string>
+
+    <!--App Strings -->
+    <string name="no_net_connection">Keine Internetverbindung</string>
+    <string name="connect_btn">Verbinden</string>
+    <string name="cannot_connect">Kann nicht mit einem Netzwerk verbinden!</string>
+    <string name="loading_more">Lade mehr Hintergrundbilder</string>
+    <string name="disable_adblock">Deaktivieren Sie AdBlock und unterstützen Sie die Entwicklung!</string>
+    <string name="yes">Ja</string>
+    <string name="yes_exit">Sind Sie sicher, dass Sie beenden möchten?</string>
+    <string name="no">Nein</string>
+
+
+    <!--Menus-->
+    <string name="menu_about">Über</string>
+    <string name="remove_database">Datenbank entfernen</string>
+    <string name="refresh">Aktualisieren</string>
+    <string name="wall_changer">Tapetenwechsler</string>
+
+    <!--Main Activity-->
+    <string name="playstore_error">Fehler beim Öffnen von PlayStore</string>
+    <string name="cannot_update">Konnte nicht nach Updates suchen!</string>
+
+    <!--Intro Activity Strings-->
+    <string name="app_desc">Die beste Hintergrundbild-Download-App für Android!</string>
+    <string name="explore_intro">Erkunden</string>
+    <string name="explore_intro_desc">Mehr als 50.000 Wallpaper für dein Gerät</string>
+    <string name="search_intro">Suche</string>
+    <string name="search_intro_desc">Finde die Tapeten, die deinem Geschmack entsprechen</string>
+    <string name="category_intro">Kategorien</string>
+    <string name="category_intro_desc">Entdecken Sie die Kategorien zum Finden von präzisen Tapeten</string>
+    <string name="fav_intro">Favoriten</string>
+    <string name="fav_intro_desc">Liebte eine Tapete? Doppeltippen, um sie zu den Favoriten hinzuzufügen, damit Sie sie nie verlieren</string>
+    <string name="ready_ask">Bereit zum Eintauchen?</string>
+    <string name="press_tick">Drücken Sie \'Tick\', um fortzufahren</string>
+    <string name="ready_rock">Du bist bereit zu rocken!</string>
+
+
+    <!--Set As Wallpaper-->
+    <string name="applying">Hintergrundbild anwenden</string>
+    <string name="apply_success">Wallpaper erfolgreich angewendet</string>
+    <string name="apply_error">Fehler</string>
+
+
+    <!--Download Handler-->
+    <string name="downloaded">Heruntergeladen</string>
+    <string name="permission_denied">Download nicht möglich, bitte erteilen Sie die Erlaubnis mit \nEinstellungen-> Apps und Benachrichtigung-> App-Genehmigung</string>
+
+    <!--Favorite Fragment-->
+    <string name="delete_warning">Warnung!</string>
+    <string name="delete_warning_msg">Dies wird alle deine Favoriten löschen!</string>
+    <string name="delete_error">Ein Fehler ist aufgetreten!</string>
+    <string name="no_favs">Noch keine Favoriten!</string>
+    <string name="double_taps">Doppeltippen Sie auf Hintergrundbilder, um sie zu den Favoriten hinzuzufügen</string>
+    <string name="add_fav_btn">Füge Favoriten hinzu</string>
+
+
+    <!--Fullscreen Wallpaper View Activity-->
+    <string name="size_option_small">Kleine Auflösung</string>
+    <string name="size_option_med">Mittlere Auflösung</string>
+    <string name="size_option_large">Große Auflösung</string>
+    <string name="download_wallpaper_btn">Herunterladen</string>
+    <string name="set_wallpaper_btn">einstellen</string>
+    <string name="downloading_wallpaper">Hintergrundbilder herunterladen</string>
+
+
+    <!--Home Fragment-->
+    <string name="loading_wallpapers">Hintergrundbilder werden geladen</string>
+
+
+    <!--Search Fragment-->
+    <string name="search_what">Sag mir, wonach du suchst, \n Ich werde den Rest erledigen!</string>
+    <string name="search404">Entschuldigung, Keine Wallpaper für \ n gefunden</string>
+    <string name="search_query_hint">Wonach suchen Sie ?</string>
+    <string name="search_query">Hintergrundbilder für suchen</string>
+    <string name="search_relevant">Suche etwas Relevantes</string>
+
+
+    <!--Downloads Fragment-->
+    <string name="no_wallpaper_downloaded">Keine Hintergrundbilder heruntergeladen!</string>
+    <string name="download_now_btn">Jetzt downloaden</string>
+
+
+    <!--About Me Section-->
+    <string name="aboutme">Android-Entwickler und Grafikdesigner. \nTech-Enthusiasten am Morgen und \nFull Otaku in der Nacht \nEssen, schlafen, Code, Wiederholen!</string>
+    <string name="morefromdev">Weitere Apps nach Entwickler</string>
+    <string name="help_translate">Helfen Sie uns zu übersetzen?</string>
+    <string name="contribute">Tragen Sie dazu bei, indem Sie bei der Übersetzung der App in verschiedenen Sprachen helfen.</string>
+    <string name="contributors">Mitwirkende</string>
+    <string name="copyright_claim">Urheberrecht / Anspruch</string>
+    <string name="cpyrghtText">Ich besitze kein Copyright für die in der App verwendeten Bilder
+                                die ganze Arbeit gehört ihren ursprünglichen Eigentümern.
+                                Die Bilder in der App sind nur für den persönlichen Gebrauch und
+                                sollte nicht ohne verkauft oder verteilt werden\n
+                                die Zustimmung ihrer Besitzer. :)</string>
+
+    <string name="shareApp">Teilen Sie die App mit Freunden</string>
+    <string name="shareText">Hei Kasse dieses furchteinflößend Tapete App ich gefunden!\nIt\'s called Wall Bucket.\nhttp://play.google.com/store/apps/details?id=</string>
+    <string name="rateApp">App in Google Play bewerten</string>
+
+    <!--Update App Dialog-->
+    <string name="update_text">Neues Update - Version</string>
+    <string name="update">Aktualisieren</string>
+    <string name="release_notes"><b>Änderungsprotokoll:</b></string>
+
+</resources>

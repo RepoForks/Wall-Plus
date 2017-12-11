@@ -40,7 +40,7 @@ public class Downloaded_Fragment extends Fragment {
     DownloadFragmentAdapter downloadFragmentAdapter;
 
     //Directories
-    private ArrayList<String> filePaths;
+    public static ArrayList<String> filePaths;
     private ArrayList<String> fileNames;
     private File[] files;
 

@@ -2,27 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <!--<item-->
-        <!--android:id="@+id/menu_gridView"-->
-        <!--android:title="@string/change_layout">-->
-        <!--<menu>-->
-            <!--<group-->
-                <!--android:checkableBehavior="none">-->
-                <!--<item-->
-                    <!--android:id="@+id/grid_two"-->
-                    <!--android:title="@string/grid_2" />-->
-                <!--<item-->
-                    <!--android:id="@+id/grid_three"-->
-                    <!--android:title="@string/grid_3" />-->
-            <!--</group>-->
-
-        <!--</menu>-->
-
-    <!--</item>-->
-
     <item
         android:id="@+id/menu_about"
         android:title="@string/menu_about" />
+
+    <!--<item android:id="@+id/automatic_wall_changer"-->
+        <!--android:title="@string/wall_changer"-->
+        <!--android:icon="@drawable/wallpaper_changer"-->
+        <!--app:showAsAction="always"/>-->
 
     <item
         android:id="@+id/refresh"

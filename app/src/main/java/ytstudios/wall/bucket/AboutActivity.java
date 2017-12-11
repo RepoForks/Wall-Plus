@@ -23,7 +23,7 @@ public class AboutActivity extends AppCompatActivity {
 
     Toolbar toolbar;
     ImageView github, gmail, linkedIn;
-    CardView shareApp, rateApp, translate,contributors,moreFromDev;
+    CardView shareApp, rateApp,moreFromDev;
     SimpleDraweeView me, codingScreen;
 
     @Override
@@ -90,7 +90,6 @@ public class AboutActivity extends AppCompatActivity {
 
         shareApp = findViewById(R.id.shareApp);
         rateApp = findViewById(R.id.rateApp);
-        translate = findViewById(R.id.translate);
 
         shareApp.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -140,27 +139,6 @@ public class AboutActivity extends AppCompatActivity {
                     intent.addFlags(Intent.FLAG_ACTIVITY_MULTIPLE_TASK);
                     startActivity(intent);
                 }
-            }
-        });
-
-        try {
-            translate.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    Intent intent = new Intent(AboutActivity.this, HelpTranslateActivity.class);
-                    startActivity(intent);
-                }
-            });
-        } catch (Exception e) {
-
-        }
-
-        contributors = findViewById(R.id.contributors);
-        contributors.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(AboutActivity.this, ContributorsActivity.class);
-                startActivity(intent);
             }
         });
 

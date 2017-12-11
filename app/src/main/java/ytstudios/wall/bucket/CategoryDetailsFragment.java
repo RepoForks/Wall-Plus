@@ -40,16 +40,13 @@ public class CategoryDetailsFragment extends AppCompatActivity {
 
     Toolbar toolbar;
     String categoryName;
-    public static RecyclerView recyclerView;
+    public RecyclerView recyclerView;
     CategoryDetailsFragmentAdapter categoryDetailsFragmentAdapter;
     GridLayoutManager gridLayoutManager;
     ArrayList<WallpapersModel> wallpapersModels;
 
     private Handler handler;
     private int pageCount = 1;
-
-    private TextView noNetText;
-    private ImageView noNetImage;
 
     private String categorySearchUrl;
 
@@ -61,8 +58,6 @@ public class CategoryDetailsFragment extends AppCompatActivity {
     ProgressBar progressBar;
 
     private static int numPages, currPg = 1;
-
-    private static String categorySite;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -88,10 +83,10 @@ public class CategoryDetailsFragment extends AppCompatActivity {
 
         progressBar = findViewById(R.id.progressBar);
 
-        noNetImage = findViewById(R.id.noNet);
-        noNetText = findViewById(R.id.noNetText);
+        ImageView noNetImage = findViewById(R.id.noNet);
+        TextView noNetText = findViewById(R.id.noNetText);
 
-        if(!isNetworkAvailable()){
+        if(!UtilityClass.isNetworkAvailable(getApplicationContext())){
             noNetImage.setVisibility(View.VISIBLE);
             noNetText.setVisibility(View.VISIBLE);
         }
@@ -99,7 +94,7 @@ public class CategoryDetailsFragment extends AppCompatActivity {
             noNetText.setVisibility(View.GONE);
             noNetImage.setVisibility(View.GONE);
         }
-        categorySite = "https://mobile.alphacoders.com/by-resolution/1/";
+        String categorySite = "https://mobile.alphacoders.com/by-resolution/1/";
         categoryName = getIntent().getStringExtra("categoryName");
         try {
             getSupportActionBar().setTitle(categoryName);
@@ -219,7 +214,7 @@ public class CategoryDetailsFragment extends AppCompatActivity {
             @Override
             public void onAdFailedToLoad(int i) {
                 Log.i("I KI VALUE ", String.valueOf(i));
-                if (i == 3 || !isNetworkAvailable()) {
+                if (i == 3 || !UtilityClass.isNetworkAvailable(getApplicationContext())) {
                     disableAdBlock.setVisibility(View.INVISIBLE);
                 } else {
                     disableAdBlock.setVisibility(View.VISIBLE);
@@ -258,20 +253,6 @@ public class CategoryDetailsFragment extends AppCompatActivity {
             bannerAd.destroy();
         }
         super.onDestroy();
-    }
-
-
-    public boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager
-                = (ConnectivityManager) getApplicationContext().getSystemService(Context.CONNECTIVITY_SERVICE);
-        try {
-            NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-            Log.i("IS NETWORK", String.valueOf(activeNetworkInfo));
-            Log.i("Connected", String.valueOf(activeNetworkInfo.isConnected()));
-            return activeNetworkInfo != null && activeNetworkInfo.isConnected();
-        } catch (Exception e) {
-        }
-        return false;
     }
 
     class loadMore extends AsyncTask<String, Integer, String> {

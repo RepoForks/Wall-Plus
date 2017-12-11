@@ -13,12 +13,16 @@
     <string name="cannot_connect">No se puede conectar a una red!</string>
     <string name="loading_more">Cargando</string>
     <string name="disable_adblock">Por favor desactive AdBlock!</string>
+    <string name="yes">Sí</string>
+    <string name="yes_exit">¿está seguro de que desea salir?</string>
+    <string name="no">No</string>
 
 
     <!--Menus-->
     <string name="menu_about">Acerca de</string>
     <string name="remove_database">Eliminar base de datos</string>
     <string name="refresh">Refrescar</string>
+    <string name="wall_changer">Wallpaper changer</string>
 
     <!--Main Activity-->
     <string name="playstore_error">Error al abrir Play Store</string>
@@ -83,22 +87,7 @@
     <string name="no_wallpaper_downloaded">¡Sin descargas!</string>
     <string name="download_now_btn">Descargar ahora</string>
 
-    <!--Help Translate Activity-->
-    <string name="translated_to">Traducido a : </string>
-    <string name="get_started">Comience</string>
-    <string name="step1">Paso 1:</string>
-    <string name="step1_desc">Descargue el archivo strings.xml de aquí</string>
-    <string name="step2">Paso 2:</string>
-    <string name="step2_desc">Traduzca las cadenas a su idioma y guarde el archivo strings.xml con un nuevo nombre</string>
-    <string name="step3">Paso 3:</string>
-    <string name="step3_desc">Envíe las cadenas de caracteres traducidas al desarrollador.</string>
-    <string name="step4">Paso 4:</string>
-    <string name="step4_desc"><b>¡Buen trabajo!</b>\nGracias por todo su esfuerzo, se le agregará a la\nlista de
-                                    contribuyentes después de que la traducción es revisada y publicada.</string>
-
-
     <!--About Me Section-->
-    <string name="myname">Yugansh Tyagi</string>
     <string name="aboutme">Desarrollador de Android y Diseñador gráfico.\nEntusiasta de la tecnología en la \nmañana y Otaku completo en la noche. \n¡Coma, duerma, codifique, repita!</string>
     <string name="morefromdev">Más apps de Developer</string>
     <string name="help_translate">Ayudanos a traducir?</string>

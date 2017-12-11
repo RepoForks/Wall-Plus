@@ -5,10 +5,10 @@ android {
     buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "ytstudios.wall.bucket"
-        minSdkVersion 19
+        minSdkVersion 21
         targetSdkVersion 27
-        versionCode 11
-        versionName "2.5"
+        versionCode 13
+        versionName "2.9"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

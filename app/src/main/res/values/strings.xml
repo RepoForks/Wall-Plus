@@ -9,7 +9,7 @@
 
     <!--Rate Dialog Resources-->
     <string name="rate_dialog_title">Looks like you like it here!</string>
-    <string name="rate_dialog_message">If you are enjoying <i>Wall Bucket</i>, would you mind taking a moment to rate it? It won\'t take more than a minute. Thanks for your support! :)</string>
+    <string name="rate_dialog_message">If you are enjoying Wall Bucket, would you mind taking a moment to rate it? It won\'t take more than a minute. Thanks for your support! :)</string>
     <string name="rate_dialog_ok">Rate It Now</string>
     <string name="rate_dialog_cancel">Later</string>
     <string name="rate_dialog_no">No, Thanks</string>
@@ -20,12 +20,16 @@
     <string name="cannot_connect">Cannot connect to a Network!</string>
     <string name="loading_more">Loading more Wallpapers</string>
     <string name="disable_adblock">Disable AdBlock and support development!</string>
+    <string name="yes">Yes</string>
+    <string name="yes_exit">Are you sure you want to exit?</string>
+    <string name="no">No</string>
 
 
     <!--Menus-->
     <string name="menu_about">About</string>
     <string name="remove_database">Remove database</string>
     <string name="refresh">Refresh</string>
+    <string name="wall_changer">Wallpaper changer</string>
 
     <!--Main Activity-->
     <string name="playstore_error">Error opening PlayStore</string>
@@ -33,7 +37,7 @@
 
     <!--Intro Activity Strings-->
     <string name="app_desc">The best wallpaper downloading app for Android!</string>
-    <string name="explore_intro"><b>Explore</b></string>
+    <string name="explore_intro">Explore</string>
     <string name="explore_intro_desc">More than 50000 wallpapers curated for your device</string>
     <string name="search_intro">Search</string>
     <string name="search_intro_desc">Find the wallpapers that fits your taste</string>
@@ -107,22 +111,9 @@
     <string name="no_wallpaper_downloaded">No Wallpapers Downloaded !</string>
     <string name="download_now_btn">Download Now</string>
 
-    <!--Help Translate Activity-->
-    <string name="translated_to">Translated to : </string>
-    <string name="get_started">Get Started</string>
-    <string name="step1">Step 1:</string>
-    <string name="step1_desc">Download the <i>strings.xml</i> from here</string>
-    <string name="step2">Step 2:</string>
-    <string name="step2_desc">Translate the strings to your language and save the strings.xml file with new name</string>
-    <string name="step3">Step 3:</string>
-    <string name="step3_desc">Mail the translated strings.xml to the developer.</string>
-    <string name="step4">Step 4:</string>
-    <string name="step4_desc"><b>Good Work!</b>\nThank you for all your effort, you will be added to the \ncontributors list
-                                after the translation is reviewed and published.</string>
-
 
     <!--About Me Section-->
-    <string name="myname">Yugansh Tyagi</string>
+    <string name="myname" translatable="false">Yugansh Tyagi</string>
     <string name="aboutme">Android Developer and Graphic Designer.\nTech Enthusiast at morning and \nFull Otaku at night\nEat, Sleep, Code, Repeat!</string>
     <string name="morefromdev">More apps by developer</string>
     <string name="help_translate">Help Us Translate?</string>
@@ -140,7 +131,7 @@
     <string name="rateApp">Rate App on \nGoogle Play</string>
 
     <!--Update App Dialog-->
-    <string name="update_text"><i>New Update  -  Version</i></string>
+    <string name="update_text">New Update  -  Version</string>
     <string name="update">Update</string>
     <string name="release_notes"><b>Change Log : </b></string>
 

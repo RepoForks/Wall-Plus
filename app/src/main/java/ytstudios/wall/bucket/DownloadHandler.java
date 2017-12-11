@@ -80,9 +80,6 @@ public class DownloadHandler extends AppCompatActivity {
                     file = new File(MainActivity.myDir2, imageName);
                     Log.i("DIRECTORY", MainActivity.myDir2.toString());
                     Log.i("IMAGE", imageName);
-                    if(file.exists()){
-                        file.delete();
-                    }
                 }
                 else {
                     file = new File(MainActivity.myDir, imageName);

@@ -35,7 +35,7 @@ public class    HomeFragmentCustomAdapter extends RecyclerView.Adapter {
     private boolean loading;
     private onLoadMoreListener onLoadMoreListener;
 
-    public HomeFragmentCustomAdapter(ArrayList<WallpapersModel> wallpapersModels, Context context, RecyclerView recyclerView) {
+    public HomeFragmentCustomAdapter(ArrayList<WallpapersModel> wallpapersModels, final Context context, RecyclerView recyclerView) {
         this.wallpapersModels = wallpapersModels;
         this.context = context;
 
@@ -50,9 +50,9 @@ public class    HomeFragmentCustomAdapter extends RecyclerView.Adapter {
                             case VIEW_ITEM:
                                 return 1;
                             case VIEW_PROG:
-                                return 3;
+                                    return 3;
                             default:
-                                return 2;
+                                return 3;
                         }
                     }catch (Exception e){
                         Log.i("GETSPAN SIZE", e.toString());

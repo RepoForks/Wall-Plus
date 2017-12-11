@@ -100,9 +100,6 @@ public class FullWallpaperViewActivity extends AppCompatActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         super.onCreate(savedInstanceState);
 
-//        LocalBroadcastManager.getInstance(getApplicationContext()).registerReceiver(broadcastReceiver,
-//                new IntentFilter("UpdateHomeViewPager"));
-
         options = new CharSequence[]{getApplicationContext().getResources().getString(R.string.size_option_small), getApplicationContext().getResources().getString(R.string.size_option_med), getApplicationContext().getResources().getString(R.string.size_option_large)};
 
         dm = getResources().getDisplayMetrics();
@@ -112,6 +109,12 @@ public class FullWallpaperViewActivity extends AppCompatActivity {
         wallpaperManager = WallpaperManager.getInstance(FullWallpaperViewActivity.this);
 
         setContentView(R.layout.fullscreen_activity_view);
+
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP){
+            getWindow().setNavigationBarColor(ContextCompat.getColor(getApplicationContext(),R.color.translucentBlackColor));
+        } else{
+            return;
+        }
 
         zoomHeart = findViewById(R.id.zoom_heart);
         final Animation bounce = AnimationUtils.loadAnimation(FullWallpaperViewActivity.this, R.anim.bounce);
@@ -385,7 +388,7 @@ public class FullWallpaperViewActivity extends AppCompatActivity {
         bannerAd.setAdListener(new AdListener() {
             @Override
             public void onAdFailedToLoad(int i) {
-                if (i == 3 || !isNetworkAvailable()) {
+                if (i == 3 || !UtilityClass.isNetworkAvailable(getApplicationContext())) {
                     disableAdBlock.setVisibility(View.GONE);
                 } else {
                     disableAdBlock.setVisibility(View.VISIBLE);
@@ -404,7 +407,7 @@ public class FullWallpaperViewActivity extends AppCompatActivity {
         setWallBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (isNetworkAvailable()) {
+                if (UtilityClass.isNetworkAvailable(getApplicationContext())) {
                     new setWall(getApplicationContext()).execute();
                 } else if (ActivityCaller.equals("Downloads")) {
                     new setWall(getApplicationContext()).execute();
@@ -482,8 +485,7 @@ public class FullWallpaperViewActivity extends AppCompatActivity {
                         break;
 
                     case "Favorites":
-                        boolean isNetworkConnected = isNetworkAvailable();
-                        if (isNetworkConnected) {
+                        if (UtilityClass.isNetworkAvailable(getApplicationContext())) {
                             encodedUrlFull = FavoriteFragment.arrayList.get(pos).getWallpaperFullURL();
                             Toast.makeText(getApplicationContext(), getResources().getString(R.string.downloading_wallpaper) + String.valueOf(wallId)  + FavoriteFragment.arrayList.get(pos).getFileType(), Toast.LENGTH_SHORT).show();
                             new DownloadHandler.ImageDownloadAndSave(getApplicationContext()).execute(encodedUrlFull, "Wallpaper " + String.valueOf(FavoriteFragment.arrayList.get(pos).getWallId()) + FavoriteFragment.arrayList.get(pos).getFileType());
@@ -579,6 +581,7 @@ public class FullWallpaperViewActivity extends AppCompatActivity {
             } catch (Exception ex) {
                 try{
                     wallpaperManager.setBitmap(result);
+                    wallpaperManager.suggestDesiredDimensions(width, height);
                     Toast.makeText(context, getResources().getString(R.string.apply_success), Toast.LENGTH_SHORT).show();
                     deleteSetImage();
                 }catch (Exception e){
@@ -650,13 +653,6 @@ public class FullWallpaperViewActivity extends AppCompatActivity {
             result = getResources().getDimensionPixelSize(resourceId);
         }
         return result;
-    }
-
-    public boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager
-                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
-        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 }
 

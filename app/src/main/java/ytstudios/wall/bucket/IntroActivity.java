@@ -1,10 +1,14 @@
 package ytstudios.wall.bucket;
 
 import android.Manifest;
+import android.annotation.TargetApi;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.support.annotation.ColorInt;
 import android.support.annotation.FloatRange;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
+import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
@@ -19,14 +23,16 @@ import agency.tango.materialintroscreen.animations.IViewTranslation;
 
 public class IntroActivity extends MaterialIntroActivity {
 
-//    final FirebaseDatabase firebaseDatabase = FirebaseDatabase.getInstance();
-//    DatabaseReference databaseReference = firebaseDatabase.getReference();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP){
+            getWindow().setNavigationBarColor(ContextCompat.getColor(getApplicationContext(),R.color.translucentBlackColor));
+        } else{
+            return;
+        }
 
         enableLastSlideAlphaExitTransition(false);
 

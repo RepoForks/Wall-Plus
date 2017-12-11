@@ -36,7 +36,7 @@ public class SearchFragmentCustomAdapter extends RecyclerView.Adapter {
 
     int rvPosition;
 
-    public SearchFragmentCustomAdapter(ArrayList<WallpapersModel> wallpapersModels, Context context, String query, RecyclerView recyclerView) {
+    public SearchFragmentCustomAdapter(ArrayList<WallpapersModel> wallpapersModels, Context context, String query, final RecyclerView recyclerView) {
         this.wallpapersModels = wallpapersModels;
         this.context = context;
         this.query = query;
@@ -52,10 +52,11 @@ public class SearchFragmentCustomAdapter extends RecyclerView.Adapter {
                         case VIEW_ITEM:
                             return 1;
                         case VIEW_PROG:
-                            if (Home_Fragment.spanCount == 2) {
-                                return 2;
-                            } else if (Home_Fragment.spanCount == 3)
-                                return 3;
+                            return 3;
+//                            if (Home_Fragment.spanCount == 2) {
+//                                return 2;
+//                            } else if (Home_Fragment.spanCount == 3)
+//                                return 3;
                         default:
                             return 3;
                     }
